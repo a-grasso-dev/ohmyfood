@@ -1,0 +1,54 @@
+.main_menu-1 {
+  h1 {
+    margin: 20px;
+  }
+}
+.menu-1-content {
+  @include layout-menu-content($color-menu1);
+  > img {
+    width: 47px;
+    margin-top: 28px;
+  }
+}
+
+article {
+  @include center-column;
+}
+
+.menu-1-content__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86%;
+  & img {
+    width: 24%;
+    margin: 40px 0 10px 0;
+  }
+  & h3 {
+    text-align: center;
+    margin: 40px 0 10px 0;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+ul {
+  padding-inline-start: 0;
+  margin: 0 26px;
+  text-align: center;
+}
+
+.menu-1-content__logo-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 36px;
+  img {
+    width: 29px;
+    margin-right: 5px;
+  }
+  h2 {
+    font-size: 1.3em;
+    margin: 0;
+  }
+}

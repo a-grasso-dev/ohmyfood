@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  @include center-column;
+}
+.main_menu-1 {
+  @include center-column;
+  padding: 20px;
+}
