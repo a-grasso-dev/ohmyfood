@@ -1,6 +1,8 @@
+@charset "UTF-8";
 .container {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 .main {
@@ -9,8 +11,23 @@
   justify-content: center;
   align-items: center;
 }
+.main .main__grid-menu {
+  width: 100%;
+}
 
-.main_menu-1 {
+@media all and (min-width: 540px) {
+  .main__grid-menu {
+    max-width: 480px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+@media all and (min-width: 720px) {
+  .main__grid-menu {
+    max-width: 607px;
+  }
+}
+.main__menu-1-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,20 +38,19 @@
 .menu-1 h1 {
   font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #3c1218;
-  font-size: 1.1em;
+  font-size: 1.7rem;
   margin: 0;
 }
 .menu-1 h2 {
   font-family: "Devonshire", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #3c1218;
-  font-size: 0.75em;
   margin: 3px 0 15px 0;
 }
 
 .menu-2 h1 {
   font-family: "Vidaloka", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #c77412;
-  font-size: 1.1em;
+  font-size: 1.7rem;
   margin: 0;
 }
 .menu-2 h2 {
@@ -43,17 +59,16 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  height: 18px;
-  width: 120px;
   text-align: center;
-  font-size: 0.75em;
+  font-size: 1rem;
   margin: 3px 0 15px 0;
+  width: 100%;
 }
 
 .menu-3 h1 {
   font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #0887fb;
-  font-size: 1.1em;
+  font-size: 1.7rem;
   margin: 0;
 }
 .menu-3 h2 {
@@ -62,17 +77,16 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  height: 18px;
-  width: 120px;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1rem;
   margin: 3px 0 15px 0;
+  width: 100%;
 }
 
 .menu-4 h1 {
   font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #42973c;
-  font-size: 1.1em;
+  font-size: 1.7rem;
   margin: 0;
 }
 .menu-4 h2 {
@@ -81,13 +95,17 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  height: 18px;
-  width: 120px;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1rem;
   margin: 3px 0 15px 0;
+  width: 100%;
 }
 
+@media all and (min-width: 720px) {
+  .main__grid-menu h1 {
+    font-size: 2rem;
+  }
+}
 .btn-soon {
   font-size: 1.5em;
   font-family: sans-serif, Arial, Helvetica;
@@ -104,7 +122,10 @@
   margin-right: 5%;
 }
 
-.main_menu-1 h1 {
+/*_________________________________
+menu-1-content: La note enchantée
+_________________________________*/
+.main__menu-1-content h1 {
   font-family: "Montserrat", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 1.25em;
 }
@@ -126,17 +147,22 @@ article p {
   font-weight: lighter;
 }
 
-.btn-soon {
+.btn-soon__container {
+  width: 100%;
+  height: 157px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 54px;
+}
+.btn-soon__container .btn-soon {
   width: 258px;
   height: 46px;
   background-color: #579c87;
-  margin: auto;
   border-radius: 11px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
-  margin-top: 40px;
 }
 
 .menu__central-block {
@@ -194,31 +220,47 @@ article p {
 header {
   background-color: #579c87;
   width: 100%;
-  height: 96px;
+  height: 98px;
   display: flex;
 }
-header .header__logo {
-  height: 39%;
+
+.header__link {
+  height: 43px;
   margin: auto;
 }
+.header__link .header__logo {
+  height: 43px;
+}
 
-footer {
+@media all and (min-width: 720px) {
+  .header__link {
+    height: 50px;
+  }
+  .header__link .header__logo {
+    height: 50px;
+  }
+}
+.footer__container {
   background-color: #579c87;
   width: 100%;
   height: 54px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+}
+.footer__container footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 720px;
 }
 
 .menu-1 {
-  width: 149.16px;
-  height: 210.17px;
+  width: 200px;
+  height: 282px;
   box-shadow: 0 0 7px #dddddd;
   margin: auto;
   margin-top: 32px;
@@ -233,8 +275,8 @@ footer {
 }
 
 .menu-2 {
-  width: 149.16px;
-  height: 210.17px;
+  width: 200px;
+  height: 282px;
   box-shadow: 0 0 7px #dddddd;
   margin: auto;
   margin-top: 32px;
@@ -246,8 +288,8 @@ footer {
 }
 
 .menu-3 {
-  width: 149.16px;
-  height: 210.17px;
+  width: 200px;
+  height: 282px;
   box-shadow: 0 0 7px #dddddd;
   margin: auto;
   margin-top: 32px;
@@ -259,8 +301,8 @@ footer {
 }
 
 .menu-4 {
-  width: 149.16px;
-  height: 210.17px;
+  width: 200px;
+  height: 282px;
   box-shadow: 0 0 7px #dddddd;
   margin: auto;
   margin-top: 32px;
@@ -271,6 +313,15 @@ footer {
   align-items: center;
 }
 
+@media all and (min-width: 720px) {
+  .menu-1,
+.menu-2,
+.menu-3,
+.menu-4 {
+    width: 270px;
+    height: 381px;
+  }
+}
 .menu__central-block {
   display: flex;
   flex-direction: column;
@@ -287,32 +338,38 @@ a {
 }
 
 .menu-1-content {
-  box-shadow: 0 0 7px #dddddd;
-  margin-bottom: 80px;
-  background-color: #fcdfdb;
-  padding-bottom: 39px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 7px #dddddd;
+  margin-bottom: 80px;
+  background-color: #fcdfdb;
+  padding-bottom: 39px;
+  max-width: 518px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .menu-1-content > img {
   width: 47px;
   margin-top: 28px;
 }
 
+@media all and (min-width: 720px) {
+  .menu-1-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
 article {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .menu-1-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 86%;
 }
 .menu-1-content__title img {
   width: 24%;
@@ -323,16 +380,37 @@ article {
   margin: 40px 0 10px 0;
 }
 
+@media all and (min-width: 540px) {
+  .menu-1-content__title img {
+    width: 30%;
+  }
+}
+@media all and (min-width: 720px) {
+  .menu-1-content__title img {
+    width: 34%;
+  }
+}
 li {
   list-style-type: none;
 }
 
 ul {
   padding-inline-start: 0;
-  margin: 0 26px;
+  margin: 0;
   text-align: center;
 }
 
+@media all and (min-width: 540px) {
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    text-align: left;
+    margin: 0;
+  }
+}
 .menu-1-content__logo-bottom {
   display: flex;
   align-items: center;

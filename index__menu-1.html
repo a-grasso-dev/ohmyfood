@@ -24,11 +24,13 @@
     <div class="container">
       <!--l'en-tête de la page-->
       <header>
-        <img src="./images/logo.png" alt="logo" class="header__logo" />
+        <a href="index.html" class="header__link">
+          <img src="./images/logo.png" alt="logo" class="header__logo" />
+        </a>
       </header>
 
       <!--bloc centrale. cette partie change en cliquant sur les différents liens-->
-      <div class="main_menu-1">
+      <div class="main__menu-1-content">
         <h1>La note enchantée</h1>
         <div class="menu-1-content">
           <img src="./images/note.png" alt="note" />
@@ -127,12 +129,18 @@
         </div>
       </div>
 
-      <footer>
-        <!--lien Mentions légales-->
-        <div class="footer__link">Mention légales</div>
-        <!--lien Mentions contactez-nous-->
-        <div class="footer__link">Contactez-nous</div>
-      </footer>
+      <div class="footer__container">
+        <footer>
+          <!--lien Mentions légales-->
+          <a class="footer__link" href="mentions legales.html" target="_blank"
+            >Mentions légales</a
+          >
+          <!--lien contactez-nous-->
+          <a class="footer__link" href="mailto:contact@ohmyfood.com"
+            >Contactez-nous</a
+          >
+        </footer>
+      </div>
     </div>
   </body>
 </html>

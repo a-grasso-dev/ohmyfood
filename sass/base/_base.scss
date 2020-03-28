@@ -1,11 +1,30 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 .main {
   @include center-column;
+  .main__grid-menu {
+    width: 100%;
+  }
 }
-.main_menu-1 {
+//mediaquerises a partir de 540px
+@media all and (min-width: 540px) {
+  .main__grid-menu {
+    max-width: 480px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+//mediaquerises a partir de 720px
+@media all and (min-width: 720px) {
+  .main__grid-menu {
+    max-width: 607px;
+  }
+}
+
+.main__menu-1-content {
   @include center-column;
   padding: 20px;
 }

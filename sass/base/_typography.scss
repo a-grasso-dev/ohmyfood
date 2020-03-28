@@ -9,7 +9,6 @@
   h2 {
     @include font-family($font-family_menu-1_secondary);
     color: $color-menu1__text-primary;
-    font-size: 0.75em;
     margin: 3px 0 15px 0;
   }
 }
@@ -43,8 +42,7 @@
     @include typography-h2_primary(
       $font-family_menu-3_secondary,
       $color-menu3__text-secondary,
-      $color-menu3__text-primary,
-      0.8em
+      $color-menu3__text-primary
     );
   }
 }
@@ -61,9 +59,15 @@
     @include typography-h2_primary(
       $font-family_menu-4_secondary,
       $color-menu4__text-primary,
-      $color-menu4__text-secondary,
-      0.8em
+      $color-menu4__text-secondary
     );
+  }
+}
+
+//mediaquerises a partir de 720px
+@media all and (min-width: 720px) {
+  .main__grid-menu h1 {
+    font-size: 2rem;
   }
 }
 
@@ -77,11 +81,11 @@
   @include typography-body;
 }
 
-//_________________________________
-//menu-1-content: La note enchantée
-//_________________________________
+/*_________________________________
+menu-1-content: La note enchantée
+_________________________________*/
 
-.main_menu-1 {
+.main__menu-1-content {
   h1 {
     @include font-family($font-family_menu-content_title);
     font-size: 1.25em;

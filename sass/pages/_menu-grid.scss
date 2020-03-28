@@ -13,6 +13,16 @@
 .menu-4 {
   @include layout-menu($color-menu4);
 }
+//mediaquerises a partir de 720px
+@media all and (min-width: 720px) {
+  .menu-1,
+  .menu-2,
+  .menu-3,
+  .menu-4 {
+    width: 270px;
+    height: 381px;
+  }
+}
 
 .menu__central-block {
   @include center-column;
