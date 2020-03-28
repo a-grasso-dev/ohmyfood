@@ -85,9 +85,10 @@
 menu-1-content: La note enchantée
 _________________________________*/
 
-.main__menu-1-content {
+.main__menu-1-content,
+.main__mentions-legales {
   h1 {
-    @include font-family($font-family_menu-content_title);
+    @include font-family($font-family_menu-content_h1);
     font-size: 1.25em;
   }
 }
@@ -109,5 +110,20 @@ article {
   }
   p {
     font-weight: lighter;
+  }
+}
+
+/*_________________________________
+mentions legales
+_________________________________*/
+
+.main__mentions-legales {
+  h2,
+  p {
+    @include font-family(Verdana);
+    font-size: 0.7em;
+  }
+  p {
+    font-size: 1em;
   }
 }

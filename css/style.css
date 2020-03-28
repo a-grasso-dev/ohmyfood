@@ -27,12 +27,25 @@
     max-width: 607px;
   }
 }
-.main__menu-1-content {
+/*_________________________________
+menu-1-content: La note enchantée
+_________________________________*/
+.main__menu-1-content,
+.main__mentions-legales {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  padding-bottom: 85px;
+}
+
+/*_________________________________
+mentions legales
+_________________________________*/
+.main__mentions-legales {
+  max-width: 518px;
+  margin: auto;
 }
 
 .menu-1 h1 {
@@ -125,7 +138,8 @@
 /*_________________________________
 menu-1-content: La note enchantée
 _________________________________*/
-.main__menu-1-content h1 {
+.main__menu-1-content h1,
+.main__mentions-legales h1 {
   font-family: "Montserrat", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 1.25em;
 }
@@ -145,6 +159,18 @@ article p {
 }
 article p {
   font-weight: lighter;
+}
+
+/*_________________________________
+mentions legales
+_________________________________*/
+.main__mentions-legales h2,
+.main__mentions-legales p {
+  font-family: Verdana, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.7em;
+}
+.main__mentions-legales p {
+  font-size: 1em;
 }
 
 .btn-soon__container {

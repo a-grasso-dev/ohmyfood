@@ -24,7 +24,22 @@
   }
 }
 
-.main__menu-1-content {
+/*_________________________________
+menu-1-content: La note enchantée
+_________________________________*/
+
+.main__menu-1-content,
+.main__mentions-legales {
   @include center-column;
   padding: 20px;
+  padding-bottom: 85px;
+}
+
+/*_________________________________
+mentions legales
+_________________________________*/
+
+.main__mentions-legales {
+  max-width: 518px;
+  margin: auto;
 }
