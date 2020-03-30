@@ -32,6 +32,7 @@ menu-1-content: La note enchantée
 _________________________________*/
 .main__menu-1-content,
 .main__menu-2-content,
+.main__menu-3-content,
 .main__mentions-legales {
   display: flex;
   flex-direction: column;
@@ -141,6 +142,7 @@ menu-1-content: La note enchantée
 _________________________________*/
 .main__menu-1-content h1,
 .main__menu-2-content h1,
+.main__menu-3-content h1,
 .main__mentions-legales h1 {
   font-family: "Montserrat", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 1.25em;
@@ -153,13 +155,14 @@ _________________________________*/
   margin: 3px 0;
 }
 
-article h3,
-article .price,
-article p {
+.menu-1-content article {
   font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: normal;
 }
-article p {
+.menu-1-content article h3,
+.menu-1-content article .price {
+  font-weight: bold;
+}
+.menu-1-content article li .item {
   font-weight: lighter;
 }
 
@@ -179,14 +182,41 @@ _________________________________*/
   margin: 75px 0 15px 0;
 }
 
-article h3,
-article .price,
-article p {
+.menu-2-content article h3,
+.menu-2-content article .price,
+.menu-2-content article p {
   font-family: "Crimson Text", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: normal;
 }
-article h3 {
+.menu-2-content article h3 {
   font-weight: bold;
+}
+
+/*_________________________________
+menu-3-content: Le délice des papilles
+_________________________________*/
+.menu-3-content h2 {
+  font-family: "Dancing Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background: linear-gradient(to bottom right, #0431df, #0887fb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 3px 0 15px 0;
+  width: 100%;
+  margin: 75px 0 15px 0;
+}
+
+.menu-3-content article {
+  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.menu-3-content article h3,
+.menu-3-content article .item {
+  font-weight: lighter;
+}
+.menu-3-content article li .price {
+  font-weight: normal;
 }
 
 /*_________________________________
@@ -347,7 +377,7 @@ header {
   box-shadow: 0 0 7px #dddddd;
   margin: auto;
   margin-top: 32px;
-  background-color: #f9f9f9;
+  background-color: #eef0f0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -415,18 +445,21 @@ article {
 }
 
 .menu-1-content__title,
-.menu-2-content__title {
+.menu-2-content__title,
+.menu-3-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .menu-1-content__title img,
-.menu-2-content__title img {
+.menu-2-content__title img,
+.menu-3-content__title img {
   width: 24%;
   margin: 40px 0 10px 0;
 }
 .menu-1-content__title h3,
-.menu-2-content__title h3 {
+.menu-2-content__title h3,
+.menu-3-content__title h3 {
   text-align: center;
   margin: 40px 0 10px 0;
 }
@@ -493,13 +526,6 @@ _________________________________*/
   padding-right: 10%;
 }
 
-@media all and (min-width: 720px) {
-  .menu-1-content,
-.menu-2-content {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-}
 .Pour-se-mettre-en-appetit {
   color: #c67412;
   margin-top: 20px;
@@ -514,24 +540,60 @@ _________________________________*/
   margin-bottom: 80px;
 }
 
-.menu-2-content__title .dec-left {
+.menu-2-content__title .dec-left,
+.menu-3-content__title .dec-left {
   position: relative;
   left: -8px;
 }
-.menu-2-content__title .dec-right {
+.menu-2-content__title .dec-right,
+.menu-3-content__title .dec-right {
   position: relative;
   right: -8px;
 }
 
 @media all and (min-width: 540px) {
-  .menu-2-content__title .dec-left {
+  .menu-2-content__title .dec-left,
+.menu-3-content__title .dec-left {
     left: -31px;
     width: 31%;
   }
-  .menu-2-content__title .dec-right {
+  .menu-2-content__title .dec-right,
+.menu-3-content__title .dec-right {
     right: -31px;
     width: 31%;
   }
+}
+/*_________________________________
+menu-3-content: Le délice des papilles
+_________________________________*/
+.menu-3-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px #dddddd;
+  margin-bottom: 80px;
+  background-color: #eef0f0;
+  padding-bottom: 39px;
+  max-width: 518px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media all and (min-width: 720px) {
+  .menu-1-content,
+.menu-2-content,
+.menu-3-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.pour-bien-commencer {
+  margin-top: 20px;
+}
+
+.gourmandises-sucrees {
+  margin-bottom: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */

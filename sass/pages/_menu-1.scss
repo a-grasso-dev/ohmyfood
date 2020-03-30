@@ -17,7 +17,8 @@ article {
 }
 
 .menu-1-content__title,
-.menu-2-content__title {
+.menu-2-content__title,
+.menu-3-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,14 +88,6 @@ _________________________________*/
   @include layout-menu-content($color-menu2);
 }
 
-@media all and (min-width: 720px) {
-  .menu-1-content,
-  .menu-2-content {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-}
-
 // Les articles du menu-2
 .Pour-se-mettre-en-appetit {
   color: $color-menu2__text-primary;
@@ -109,7 +102,8 @@ _________________________________*/
 }
 
 //les elements decoratifs
-.menu-2-content__title {
+.menu-2-content__title,
+.menu-3-content__title {
   .dec-left {
     position: relative;
     left: -8px;
@@ -120,7 +114,8 @@ _________________________________*/
   }
 }
 @media all and (min-width: 540px) {
-  .menu-2-content__title {
+  .menu-2-content__title,
+  .menu-3-content__title {
     .dec-left {
       left: -31px;
       width: 31%;
@@ -130,4 +125,30 @@ _________________________________*/
       width: 31%;
     }
   }
+}
+
+/*_________________________________
+menu-3-content: Le délice des papilles
+_________________________________*/
+
+.menu-3-content {
+  @include layout-menu-content($color-menu3);
+}
+
+@media all and (min-width: 720px) {
+  .menu-1-content,
+  .menu-2-content,
+  .menu-3-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+// Les articles du menu-3
+
+.pour-bien-commencer {
+  margin-top: 20px;
+}
+.gourmandises-sucrees {
+  margin-bottom: 80px;
 }

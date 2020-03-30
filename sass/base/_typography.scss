@@ -87,6 +87,7 @@ _________________________________*/
 
 .main__menu-1-content,
 .main__menu-2-content,
+.main__menu-3-content,
 .main__mentions-legales {
   h1 {
     @include font-family($font-family_menu-content_h1);
@@ -101,16 +102,18 @@ _________________________________*/
     margin: 3px 0;
   }
 }
-
-article {
-  h3,
-  .price,
-  p {
+.menu-1-content {
+  article {
     @include font-family($font-family_menu_primary);
-    font-weight: normal;
-  }
-  p {
-    font-weight: lighter;
+    h3,
+    .price {
+      font-weight: bold;
+    }
+    li {
+      .item {
+        font-weight: lighter;
+      }
+    }
   }
 }
 
@@ -128,19 +131,50 @@ _________________________________*/
     margin: 75px 0 15px 0;
   }
 }
-
-article {
-  h3,
-  .price,
-  p {
-    @include font-family($font-family_menu-content_menu-2_primary);
-    font-weight: normal;
-  }
-  h3 {
-    font-weight: bold;
+.menu-2-content {
+  article {
+    h3,
+    .price,
+    p {
+      @include font-family($font-family_menu-content_menu-2_primary);
+      font-weight: normal;
+    }
+    h3 {
+      font-weight: bold;
+    }
   }
 }
 
+/*_________________________________
+menu-3-content: Le délice des papilles
+_________________________________*/
+
+.menu-3-content {
+  h2 {
+    @include typography-h2_primary(
+      $font-family_menu-3_secondary,
+      $color-menu3__text-secondary,
+      $color-menu3__text-primary,
+      2.3rem
+    );
+    margin: 75px 0 15px 0;
+  }
+}
+
+.menu-3-content {
+  article {
+    @include font-family($font-family_menu_primary);
+    h3,
+    .item {
+      font-weight: lighter;
+    }
+    li {
+      .price {
+        font-weight: normal;
+      }
+    }
+  }
+}
 /*_________________________________
 mentions legales
 _________________________________*/
