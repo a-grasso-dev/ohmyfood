@@ -6,30 +6,26 @@
 .menu-1-content {
   @include layout-menu-content($color-menu1);
   > img {
-    width: 47px;
-    margin-top: 28px;
+    width: 64px;
+    margin-top: 47px;
   }
 }
-@media all and (min-width: 720px) {
-  .menu-1-content {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-}
+
 article {
   display: flex;
   flex-direction: column;
 }
 
-.menu-1-content__title {
+.menu-1-content__title,
+.menu-2-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  & img {
+  img {
     width: 24%;
     margin: 40px 0 10px 0;
   }
-  & h3 {
+  h3 {
     text-align: center;
     margin: 40px 0 10px 0;
   }
@@ -74,11 +70,64 @@ ul {
   align-items: center;
   margin-top: 36px;
   img {
-    width: 29px;
+    width: 36px;
     margin-right: 5px;
   }
   h2 {
-    font-size: 1.3em;
+    font-size: 1.6em;
     margin: 0;
+  }
+}
+
+/*_________________________________
+menu-2-content: Le chic à la française
+_________________________________*/
+
+.menu-2-content {
+  @include layout-menu-content($color-menu2);
+}
+
+@media all and (min-width: 720px) {
+  .menu-1-content,
+  .menu-2-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+// Les articles du menu-2
+.Pour-se-mettre-en-appetit {
+  color: $color-menu2__text-primary;
+  margin-top: 20px;
+}
+.Plaisir-des-papilles {
+  color: $color-menu2__text-tertiary;
+}
+.Gourmandises-sucrees {
+  color: $color-menu2__text-secondary;
+  margin-bottom: 80px;
+}
+
+//les elements decoratifs
+.menu-2-content__title {
+  .dec-left {
+    position: relative;
+    left: -8px;
+  }
+  .dec-right {
+    position: relative;
+    right: -8px;
+  }
+}
+@media all and (min-width: 540px) {
+  .menu-2-content__title {
+    .dec-left {
+      left: -31px;
+      width: 31%;
+    }
+    .dec-right {
+      right: -31px;
+      width: 31%;
+    }
   }
 }

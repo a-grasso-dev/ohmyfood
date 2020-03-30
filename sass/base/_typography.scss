@@ -86,6 +86,7 @@ menu-1-content: La note enchantée
 _________________________________*/
 
 .main__menu-1-content,
+.main__menu-2-content,
 .main__mentions-legales {
   h1 {
     @include font-family($font-family_menu-content_h1);
@@ -94,9 +95,9 @@ _________________________________*/
 }
 .menu-1-content {
   h2 {
-    @include font-family($font-family_menu_primary);
-    font-weight: normal;
-    font-size: 1.5em;
+    @include font-family($font-family_menu-1_secondary);
+    color: $color-menu1__text-primary;
+    font-size: 2.5em;
     margin: 3px 0;
   }
 }
@@ -110,6 +111,33 @@ article {
   }
   p {
     font-weight: lighter;
+  }
+}
+
+/*_________________________________
+menu-2-content: Le chic à la française
+_________________________________*/
+.menu-2-content {
+  h2 {
+    @include typography-h2_primary(
+      $font-family_menu-2_secondary,
+      $color-menu2__text-primary,
+      $color-menu2__text-secondary,
+      2.3rem
+    );
+    margin: 75px 0 15px 0;
+  }
+}
+
+article {
+  h3,
+  .price,
+  p {
+    @include font-family($font-family_menu-content_menu-2_primary);
+    font-weight: normal;
+  }
+  h3 {
+    font-weight: bold;
   }
 }
 

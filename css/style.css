@@ -31,6 +31,7 @@
 menu-1-content: La note enchantée
 _________________________________*/
 .main__menu-1-content,
+.main__menu-2-content,
 .main__mentions-legales {
   display: flex;
   flex-direction: column;
@@ -62,13 +63,13 @@ _________________________________*/
 
 .menu-2 h1 {
   font-family: "Vidaloka", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #c77412;
+  color: #c67412;
   font-size: 1.7rem;
   margin: 0;
 }
 .menu-2 h2 {
   font-family: "Kurale", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: linear-gradient(to bottom right, #c77412, #905bfd);
+  background: linear-gradient(to bottom right, #c67412, #6e4ccc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -139,15 +140,16 @@ _________________________________*/
 menu-1-content: La note enchantée
 _________________________________*/
 .main__menu-1-content h1,
+.main__menu-2-content h1,
 .main__mentions-legales h1 {
   font-family: "Montserrat", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 1.25em;
 }
 
 .menu-1-content h2 {
-  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 1.5em;
+  font-family: "Devonshire", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #3c1218;
+  font-size: 2.5em;
   margin: 3px 0;
 }
 
@@ -159,6 +161,32 @@ article p {
 }
 article p {
   font-weight: lighter;
+}
+
+/*_________________________________
+menu-2-content: Le chic à la française
+_________________________________*/
+.menu-2-content h2 {
+  font-family: "Kurale", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background: linear-gradient(to bottom right, #c67412, #6e4ccc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 3px 0 15px 0;
+  width: 100%;
+  margin: 75px 0 15px 0;
+}
+
+article h3,
+article .price,
+article p {
+  font-family: "Crimson Text", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: normal;
+}
+article h3 {
+  font-weight: bold;
 }
 
 /*_________________________________
@@ -377,31 +405,28 @@ a {
   padding-right: 10%;
 }
 .menu-1-content > img {
-  width: 47px;
-  margin-top: 28px;
+  width: 64px;
+  margin-top: 47px;
 }
 
-@media all and (min-width: 720px) {
-  .menu-1-content {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-}
 article {
   display: flex;
   flex-direction: column;
 }
 
-.menu-1-content__title {
+.menu-1-content__title,
+.menu-2-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu-1-content__title img {
+.menu-1-content__title img,
+.menu-2-content__title img {
   width: 24%;
   margin: 40px 0 10px 0;
 }
-.menu-1-content__title h3 {
+.menu-1-content__title h3,
+.menu-2-content__title h3 {
   text-align: center;
   margin: 40px 0 10px 0;
 }
@@ -443,12 +468,70 @@ ul {
   margin-top: 36px;
 }
 .menu-1-content__logo-bottom img {
-  width: 29px;
+  width: 36px;
   margin-right: 5px;
 }
 .menu-1-content__logo-bottom h2 {
-  font-size: 1.3em;
+  font-size: 1.6em;
   margin: 0;
+}
+
+/*_________________________________
+menu-2-content: Le chic à la française
+_________________________________*/
+.menu-2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px #dddddd;
+  margin-bottom: 80px;
+  background-color: #fff5fe;
+  padding-bottom: 39px;
+  max-width: 518px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media all and (min-width: 720px) {
+  .menu-1-content,
+.menu-2-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.Pour-se-mettre-en-appetit {
+  color: #c67412;
+  margin-top: 20px;
+}
+
+.Plaisir-des-papilles {
+  color: #a56799;
+}
+
+.Gourmandises-sucrees {
+  color: #6e4ccc;
+  margin-bottom: 80px;
+}
+
+.menu-2-content__title .dec-left {
+  position: relative;
+  left: -8px;
+}
+.menu-2-content__title .dec-right {
+  position: relative;
+  right: -8px;
+}
+
+@media all and (min-width: 540px) {
+  .menu-2-content__title .dec-left {
+    left: -31px;
+    width: 31%;
+  }
+  .menu-2-content__title .dec-right {
+    right: -31px;
+    width: 31%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
