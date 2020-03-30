@@ -85,21 +85,25 @@
 menu-1-content: La note enchantée
 _________________________________*/
 
+//h1 pour tous les menu-content
 .main__menu-1-content,
 .main__menu-2-content,
 .main__menu-3-content,
+.main__menu-4-content,
 .main__mentions-legales {
   h1 {
     @include font-family($font-family_menu-content_h1);
     font-size: 1.25em;
   }
 }
+
 .menu-1-content {
   h2 {
     @include font-family($font-family_menu-1_secondary);
     color: $color-menu1__text-primary;
     font-size: 2.5em;
     margin: 3px 0;
+    height: 50px;
   }
 }
 .menu-1-content {
@@ -128,6 +132,7 @@ _________________________________*/
       $color-menu2__text-secondary,
       2.3rem
     );
+    height: 50px;
     margin: 75px 0 15px 0;
   }
 }
@@ -157,11 +162,13 @@ _________________________________*/
       $color-menu3__text-primary,
       2.3rem
     );
+    height: 50px;
     margin: 75px 0 15px 0;
   }
 }
 
-.menu-3-content {
+.menu-3-content,
+.menu-4-content {
   article {
     @include font-family($font-family_menu_primary);
     h3,
@@ -175,6 +182,24 @@ _________________________________*/
     }
   }
 }
+
+/*_________________________________
+menu-4-content: La palette du goût
+_________________________________*/
+
+.menu-4-content {
+  h2 {
+    @include typography-h2_primary(
+      $font-family_menu-4_secondary,
+      $color-menu4__text-primary,
+      $color-menu4__text-secondary,
+      2.3rem
+    );
+    height: 50px;
+    margin: 75px 0 15px 0;
+  }
+}
+
 /*_________________________________
 mentions legales
 _________________________________*/

@@ -33,6 +33,7 @@ _________________________________*/
 .main__menu-1-content,
 .main__menu-2-content,
 .main__menu-3-content,
+.main__menu-4-content,
 .main__mentions-legales {
   display: flex;
   flex-direction: column;
@@ -143,6 +144,7 @@ _________________________________*/
 .main__menu-1-content h1,
 .main__menu-2-content h1,
 .main__menu-3-content h1,
+.main__menu-4-content h1,
 .main__mentions-legales h1 {
   font-family: "Montserrat", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 1.25em;
@@ -153,6 +155,7 @@ _________________________________*/
   color: #3c1218;
   font-size: 2.5em;
   margin: 3px 0;
+  height: 50px;
 }
 
 .menu-1-content article {
@@ -179,6 +182,7 @@ _________________________________*/
   font-size: 2.3rem;
   margin: 3px 0 15px 0;
   width: 100%;
+  height: 50px;
   margin: 75px 0 15px 0;
 }
 
@@ -205,18 +209,40 @@ _________________________________*/
   font-size: 2.3rem;
   margin: 3px 0 15px 0;
   width: 100%;
+  height: 50px;
   margin: 75px 0 15px 0;
 }
 
-.menu-3-content article {
+.menu-3-content article,
+.menu-4-content article {
   font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .menu-3-content article h3,
-.menu-3-content article .item {
+.menu-3-content article .item,
+.menu-4-content article h3,
+.menu-4-content article .item {
   font-weight: lighter;
 }
-.menu-3-content article li .price {
+.menu-3-content article li .price,
+.menu-4-content article li .price {
   font-weight: normal;
+}
+
+/*_________________________________
+menu-4-content: La palette du goût
+_________________________________*/
+.menu-4-content h2 {
+  font-family: "Kaushan Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background: linear-gradient(to bottom right, #42973c, #bfff7e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 3px 0 15px 0;
+  width: 100%;
+  height: 50px;
+  margin: 75px 0 15px 0;
 }
 
 /*_________________________________
@@ -446,20 +472,23 @@ article {
 
 .menu-1-content__title,
 .menu-2-content__title,
-.menu-3-content__title {
+.menu-3-content__title,
+.menu-4-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .menu-1-content__title img,
 .menu-2-content__title img,
-.menu-3-content__title img {
+.menu-3-content__title img,
+.menu-4-content__title img {
   width: 24%;
   margin: 40px 0 10px 0;
 }
 .menu-1-content__title h3,
 .menu-2-content__title h3,
-.menu-3-content__title h3 {
+.menu-3-content__title h3,
+.menu-4-content__title h3 {
   text-align: center;
   margin: 40px 0 10px 0;
 }
@@ -541,24 +570,28 @@ _________________________________*/
 }
 
 .menu-2-content__title .dec-left,
-.menu-3-content__title .dec-left {
+.menu-3-content__title .dec-left,
+.menu-4-content__title .dec-left {
   position: relative;
   left: -8px;
 }
 .menu-2-content__title .dec-right,
-.menu-3-content__title .dec-right {
+.menu-3-content__title .dec-right,
+.menu-4-content__title .dec-right {
   position: relative;
   right: -8px;
 }
 
 @media all and (min-width: 540px) {
   .menu-2-content__title .dec-left,
-.menu-3-content__title .dec-left {
+.menu-3-content__title .dec-left,
+.menu-4-content__title .dec-left {
     left: -31px;
     width: 31%;
   }
   .menu-2-content__title .dec-right,
-.menu-3-content__title .dec-right {
+.menu-3-content__title .dec-right,
+.menu-4-content__title .dec-right {
     right: -31px;
     width: 31%;
   }
@@ -580,20 +613,41 @@ _________________________________*/
   padding-right: 10%;
 }
 
-@media all and (min-width: 720px) {
-  .menu-1-content,
-.menu-2-content,
-.menu-3-content {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-}
-.pour-bien-commencer {
+.pour-bien-commencer,
+.main__menu-4-content {
   margin-top: 20px;
 }
 
-.gourmandises-sucrees {
+.gourmandises-sucrees,
+.au-sommet-de-l-art {
   margin-bottom: 80px;
+}
+
+/*_________________________________
+menu-4-content: La palette du goût
+_________________________________*/
+.menu-4-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px #dddddd;
+  margin-bottom: 80px;
+  background-color: #fdfffd;
+  padding-bottom: 39px;
+  max-width: 518px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media all and (min-width: 720px) {
+  .menu-1-content,
+.menu-2-content,
+.menu-3-content,
+.menu-4-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

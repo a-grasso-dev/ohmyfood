@@ -15,10 +15,11 @@ article {
   display: flex;
   flex-direction: column;
 }
-
+//conteniteur de titres des menus
 .menu-1-content__title,
 .menu-2-content__title,
-.menu-3-content__title {
+.menu-3-content__title,
+.menu-4-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +57,7 @@ ul {
   margin: 0;
   text-align: center;
 }
+
 @media all and (min-width: 540px) {
   li {
     display: flex;
@@ -66,6 +68,7 @@ ul {
     margin: 0;
   }
 }
+
 .menu-1-content__logo-bottom {
   display: flex;
   align-items: center;
@@ -101,9 +104,10 @@ _________________________________*/
   margin-bottom: 80px;
 }
 
-//les elements decoratifs
+//les elements decoratifs qui depasse les listes a puces
 .menu-2-content__title,
-.menu-3-content__title {
+.menu-3-content__title,
+.menu-4-content__title {
   .dec-left {
     position: relative;
     left: -8px;
@@ -115,7 +119,8 @@ _________________________________*/
 }
 @media all and (min-width: 540px) {
   .menu-2-content__title,
-  .menu-3-content__title {
+  .menu-3-content__title,
+  .menu-4-content__title {
     .dec-left {
       left: -31px;
       width: 31%;
@@ -135,20 +140,32 @@ _________________________________*/
   @include layout-menu-content($color-menu3);
 }
 
+// Les articles du menu-3 et menu-4
+
+.pour-bien-commencer,
+.main__menu-4-content {
+  margin-top: 20px;
+}
+.gourmandises-sucrees,
+.au-sommet-de-l-art {
+  margin-bottom: 80px;
+}
+
+/*_________________________________
+menu-4-content: La palette du goût
+_________________________________*/
+
+.menu-4-content {
+  @include layout-menu-content($color-menu4);
+}
+
+//mediaquerises a partir de 720px pour paddind de gauche et droite de tous les menus
 @media all and (min-width: 720px) {
   .menu-1-content,
   .menu-2-content,
-  .menu-3-content {
+  .menu-3-content,
+  .menu-4-content {
     padding-left: 70px;
     padding-right: 70px;
   }
-}
-
-// Les articles du menu-3
-
-.pour-bien-commencer {
-  margin-top: 20px;
-}
-.gourmandises-sucrees {
-  margin-bottom: 80px;
 }
