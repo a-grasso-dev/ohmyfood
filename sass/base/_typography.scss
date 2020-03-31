@@ -7,9 +7,11 @@
     );
   }
   h2 {
-    @include font-family($font-family_menu-1_secondary);
-    color: $color-menu1__text-primary;
-    margin: 3px 0 15px 0;
+    @include typography-h2_primary(
+      $font-family_menu-1_secondary,
+      $color-menu1__text-primary,
+      $color-menu1__text-primary
+    );
   }
 }
 
@@ -27,6 +29,7 @@
       $color-menu2__text-primary,
       $color-menu2__text-secondary
     );
+    height: 21px;
   }
 }
 
@@ -64,10 +67,15 @@
   }
 }
 
-//mediaquerises a partir de 720px
+/* mediaquerises a partir de 720px
+pour les "h1" et "h2" de tous les "menu" */
 @media all and (min-width: 720px) {
-  .main__grid-menu h1 {
+  .menu__central-block h1 {
     font-size: 2rem;
+  }
+  .menu__central-block h2 {
+    font-size: 1.4rem;
+    height: 29px;
   }
 }
 
@@ -212,5 +220,17 @@ _________________________________*/
   }
   p {
     font-size: 1em;
+  }
+}
+
+//mediaquerises a partir de 540px
+@media all and (min-width: 540px) {
+  .menu-3-content,
+  .menu-4-content {
+    h2 {
+      font-size: 3rem;
+      height: 65px;
+      margin: 75px 0 7px 0;
+    }
   }
 }

@@ -1,15 +1,24 @@
+html,
+body {
+  height: 100%;
+}
 .container {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   margin: auto;
 }
+
 .main {
   @include center-column;
+  flex-grow: 1;
   .main__grid-menu {
     width: 100%;
   }
 }
-//mediaquerises a partir de 540px
+
+/* mediaquerises a partir de 540px
+pour positionner les "menu" sur 2 colonne*/
 @media all and (min-width: 540px) {
   .main__grid-menu {
     max-width: 480px;
@@ -17,33 +26,30 @@
     flex-flow: row wrap;
   }
 }
-//mediaquerises a partir de 720px
+/* mediaquerises a partir de 720px
+pour positionner les "menu" sur 2 colonne*/
 @media all and (min-width: 720px) {
   .main__grid-menu {
     max-width: 607px;
   }
 }
 
-/*_________________________________
-menu-1-content: La note enchantée
-_________________________________*/
-
-//Pour centrer les menu-content
+//Pour centrer les 4 "menu-content"
 .main__menu-1-content,
 .main__menu-2-content,
 .main__menu-3-content,
-.main__menu-4-content,
-.main__mentions-legales {
+.main__menu-4-content {
   @include center-column;
   padding: 20px;
   padding-bottom: 85px;
+  flex-grow: 1;
 }
 
-/*_________________________________
-mentions legales
-_________________________________*/
-
+// mentions legales
 .main__mentions-legales {
+  @include center-column;
+  padding: 20px;
   max-width: 518px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }

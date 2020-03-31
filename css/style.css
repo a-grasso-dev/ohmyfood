@@ -1,5 +1,11 @@
 @charset "UTF-8";
+html,
+body {
+  height: 100%;
+}
+
 .container {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -10,11 +16,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 .main .main__grid-menu {
   width: 100%;
 }
 
+/* mediaquerises a partir de 540px
+pour positionner les "menu" sur 2 colonne*/
 @media all and (min-width: 540px) {
   .main__grid-menu {
     max-width: 480px;
@@ -22,33 +31,35 @@
     flex-flow: row wrap;
   }
 }
+/* mediaquerises a partir de 720px
+pour positionner les "menu" sur 2 colonne*/
 @media all and (min-width: 720px) {
   .main__grid-menu {
     max-width: 607px;
   }
 }
-/*_________________________________
-menu-1-content: La note enchantée
-_________________________________*/
 .main__menu-1-content,
 .main__menu-2-content,
 .main__menu-3-content,
-.main__menu-4-content,
-.main__mentions-legales {
+.main__menu-4-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
   padding-bottom: 85px;
+  flex-grow: 1;
 }
 
-/*_________________________________
-mentions legales
-_________________________________*/
 .main__mentions-legales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   max-width: 518px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-1 h1 {
@@ -59,8 +70,14 @@ _________________________________*/
 }
 .menu-1 h2 {
   font-family: "Devonshire", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #3c1218;
+  background: linear-gradient(to bottom right, #3c1218, #3c1218);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 1rem;
   margin: 3px 0 15px 0;
+  width: 100%;
 }
 
 .menu-2 h1 {
@@ -79,6 +96,7 @@ _________________________________*/
   font-size: 1rem;
   margin: 3px 0 15px 0;
   width: 100%;
+  height: 21px;
 }
 
 .menu-3 h1 {
@@ -117,9 +135,16 @@ _________________________________*/
   width: 100%;
 }
 
+/* mediaquerises a partir de 720px
+pour les "h1" et "h2" de tous les "menu" */
 @media all and (min-width: 720px) {
-  .main__grid-menu h1 {
+  .menu__central-block h1 {
     font-size: 2rem;
+  }
+
+  .menu__central-block h2 {
+    font-size: 1.4rem;
+    height: 29px;
   }
 }
 .btn-soon {
@@ -257,6 +282,14 @@ _________________________________*/
   font-size: 1em;
 }
 
+@media all and (min-width: 540px) {
+  .menu-3-content h2,
+.menu-4-content h2 {
+    font-size: 3rem;
+    height: 65px;
+    margin: 75px 0 7px 0;
+  }
+}
 .btn-soon__container {
   width: 100%;
   height: 157px;
@@ -285,9 +318,9 @@ _________________________________*/
   opacity: 0.5;
 }
 
-.btn-soon:after {
+.btn-soon::after {
   content: " .";
-  animation: dots 2s steps(5, end) infinite;
+  animation: dots 2s infinite;
 }
 
 @keyframes dots {
@@ -307,24 +340,22 @@ _________________________________*/
   }
 }
 .footer__link:hover {
-  animation: shake 0.82s cubic-bezier(0, 0.78, 0.54, 0.1) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
+  animation: shake 0.82s cubic-bezier(0.65, 0.23, 0.41, 0.79);
+  transform: translate(0, 0);
 }
 
 @keyframes shake {
   0% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate(-1px, 0);
   }
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate(2px, 0);
   }
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+    transform: translate(-4px, 0);
   }
   40%, 60% {
-    transform: translate3d(4px, 0, 0);
+    transform: translate(4px, 0);
   }
 }
 header {
@@ -518,6 +549,9 @@ ul {
     display: flex;
     justify-content: space-between;
   }
+  li .price {
+    margin-left: 25px;
+  }
 
   ul {
     text-align: left;
@@ -532,6 +566,7 @@ ul {
 .menu-1-content__logo-bottom img {
   width: 36px;
   margin-right: 5px;
+  margin-bottom: 18px;
 }
 .menu-1-content__logo-bottom h2 {
   font-size: 1.6em;

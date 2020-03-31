@@ -32,7 +32,7 @@ article {
     margin: 40px 0 10px 0;
   }
 }
-
+//mediaquerises a partir de 540px
 @media all and (min-width: 540px) {
   .menu-1-content__title {
     & img {
@@ -40,7 +40,7 @@ article {
     }
   }
 }
-
+//mediaquerises a partir de 720px
 @media all and (min-width: 720px) {
   .menu-1-content__title {
     & img {
@@ -58,10 +58,14 @@ ul {
   text-align: center;
 }
 
+//mediaquerises a partir de 540px
 @media all and (min-width: 540px) {
   li {
     display: flex;
     justify-content: space-between;
+    .price {
+      margin-left: 25px;
+    }
   }
   ul {
     text-align: left;
@@ -76,6 +80,7 @@ ul {
   img {
     width: 36px;
     margin-right: 5px;
+    margin-bottom: 18px;
   }
   h2 {
     font-size: 1.6em;
@@ -117,6 +122,8 @@ _________________________________*/
     right: -8px;
   }
 }
+
+//mediaquerises a partir de 540px
 @media all and (min-width: 540px) {
   .menu-2-content__title,
   .menu-3-content__title,
