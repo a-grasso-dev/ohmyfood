@@ -1,3 +1,7 @@
+/*___________________________________________
+"home-page"
+___________________________________________*/
+
 //menu-1
 .menu-1 {
   h1 {
@@ -89,15 +93,12 @@ pour les "h1" et "h2" de tous les "menu" */
   @include typography-body;
 }
 
-/*_________________________________
+/*___________________________________________
 menu-1-content: La note enchantée
-_________________________________*/
+___________________________________________*/
 
-//h1 pour tous les menu-content
-.main__menu-1-content,
-.main__menu-2-content,
-.main__menu-3-content,
-.main__menu-4-content,
+// titre externe "h1" pour tous les "menu-content" + "mentions-legales"
+.main__menu-content,
 .main__mentions-legales {
   h1 {
     @include font-family($font-family_menu-content_h1);
@@ -129,9 +130,9 @@ _________________________________*/
   }
 }
 
-/*_________________________________
+/*___________________________________________
 menu-2-content: Le chic à la française
-_________________________________*/
+___________________________________________*/
 .menu-2-content {
   h2 {
     @include typography-h2_primary(
@@ -146,21 +147,19 @@ _________________________________*/
 }
 .menu-2-content {
   article {
-    h3,
-    .price,
-    p {
-      @include font-family($font-family_menu-content_menu-2_primary);
-      font-weight: normal;
-    }
+    @include font-family($font-family_menu-content_menu-2_primary);
     h3 {
       font-weight: bold;
+    }
+    li {
+      font-weight: normal;
     }
   }
 }
 
-/*_________________________________
+/*___________________________________________
 menu-3-content: Le délice des papilles
-_________________________________*/
+___________________________________________*/
 
 .menu-3-content {
   h2 {
@@ -191,9 +190,9 @@ _________________________________*/
   }
 }
 
-/*_________________________________
+/*___________________________________________
 menu-4-content: La palette du goût
-_________________________________*/
+___________________________________________*/
 
 .menu-4-content {
   h2 {
@@ -208,21 +207,6 @@ _________________________________*/
   }
 }
 
-/*_________________________________
-mentions legales
-_________________________________*/
-
-.main__mentions-legales {
-  h2,
-  p {
-    @include font-family(Verdana);
-    font-size: 0.7em;
-  }
-  p {
-    font-size: 1em;
-  }
-}
-
 //mediaquerises a partir de 540px
 @media all and (min-width: 540px) {
   .menu-3-content,
@@ -232,5 +216,20 @@ _________________________________*/
       height: 65px;
       margin: 75px 0 7px 0;
     }
+  }
+}
+
+/*___________________________________________
+mentions legales
+___________________________________________*/
+
+.main__mentions-legales {
+  h2,
+  p {
+    @include font-family(Verdana);
+    font-size: 0.7em;
+  }
+  p {
+    font-size: 1em;
   }
 }

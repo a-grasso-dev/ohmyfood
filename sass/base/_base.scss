@@ -35,20 +35,14 @@ pour positionner les "menu" sur 2 colonne*/
 }
 
 //Pour centrer les 4 "menu-content"
-.main__menu-1-content,
-.main__menu-2-content,
-.main__menu-3-content,
-.main__menu-4-content {
-  @include center-column;
-  padding: 20px;
-  padding-bottom: 85px;
+.main__menu-content {
+  @include center-pages;
   flex-grow: 1;
 }
 
-// mentions legales
+// Pour centrer les "mentions-legales"
 .main__mentions-legales {
-  @include center-column;
-  padding: 20px;
+  @include center-pages;
   max-width: 518px;
   margin-left: auto;
   margin-right: auto;

@@ -38,10 +38,7 @@ pour positionner les "menu" sur 2 colonne*/
     max-width: 607px;
   }
 }
-.main__menu-1-content,
-.main__menu-2-content,
-.main__menu-3-content,
-.main__menu-4-content {
+.main__menu-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,11 +54,15 @@ pour positionner les "menu" sur 2 colonne*/
   justify-content: center;
   align-items: center;
   padding: 20px;
+  padding-bottom: 85px;
   max-width: 518px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/*___________________________________________
+"home-page"
+___________________________________________*/
 .menu-1 h1 {
   font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #3c1218;
@@ -149,7 +150,7 @@ pour les "h1" et "h2" de tous les "menu" */
 }
 .btn-soon {
   font-size: 1.5em;
-  font-family: sans-serif, Arial, Helvetica;
+  font-family: sans-serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #fdcb46;
   margin-left: 5%;
   margin-right: 5%;
@@ -157,19 +158,16 @@ pour les "h1" et "h2" de tous les "menu" */
 
 .footer__link {
   font-size: 1em;
-  font-family: sans-serif, Arial, Helvetica;
+  font-family: sans-serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #fdcb46;
   margin-left: 5%;
   margin-right: 5%;
 }
 
-/*_________________________________
+/*___________________________________________
 menu-1-content: La note enchantée
-_________________________________*/
-.main__menu-1-content h1,
-.main__menu-2-content h1,
-.main__menu-3-content h1,
-.main__menu-4-content h1,
+___________________________________________*/
+.main__menu-content h1,
 .main__mentions-legales h1 {
   font-family: "Montserrat", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 1.25em;
@@ -194,9 +192,9 @@ _________________________________*/
   font-weight: lighter;
 }
 
-/*_________________________________
+/*___________________________________________
 menu-2-content: Le chic à la française
-_________________________________*/
+___________________________________________*/
 .menu-2-content h2 {
   font-family: "Kurale", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background: linear-gradient(to bottom right, #c67412, #6e4ccc);
@@ -211,19 +209,19 @@ _________________________________*/
   margin: 75px 0 15px 0;
 }
 
-.menu-2-content article h3,
-.menu-2-content article .price,
-.menu-2-content article p {
+.menu-2-content article {
   font-family: "Crimson Text", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: normal;
 }
 .menu-2-content article h3 {
   font-weight: bold;
 }
+.menu-2-content article li {
+  font-weight: normal;
+}
 
-/*_________________________________
+/*___________________________________________
 menu-3-content: Le délice des papilles
-_________________________________*/
+___________________________________________*/
 .menu-3-content h2 {
   font-family: "Dancing Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background: linear-gradient(to bottom right, #0431df, #0887fb);
@@ -253,9 +251,9 @@ _________________________________*/
   font-weight: normal;
 }
 
-/*_________________________________
+/*___________________________________________
 menu-4-content: La palette du goût
-_________________________________*/
+___________________________________________*/
 .menu-4-content h2 {
   font-family: "Kaushan Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background: linear-gradient(to bottom right, #42973c, #bfff7e);
@@ -270,9 +268,17 @@ _________________________________*/
   margin: 75px 0 15px 0;
 }
 
-/*_________________________________
+@media all and (min-width: 540px) {
+  .menu-3-content h2,
+.menu-4-content h2 {
+    font-size: 3rem;
+    height: 65px;
+    margin: 75px 0 7px 0;
+  }
+}
+/*___________________________________________
 mentions legales
-_________________________________*/
+___________________________________________*/
 .main__mentions-legales h2,
 .main__mentions-legales p {
   font-family: Verdana, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -282,14 +288,6 @@ _________________________________*/
   font-size: 1em;
 }
 
-@media all and (min-width: 540px) {
-  .menu-3-content h2,
-.menu-4-content h2 {
-    font-size: 3rem;
-    height: 65px;
-    margin: 75px 0 7px 0;
-  }
-}
 .btn-soon__container {
   width: 100%;
   height: 157px;
@@ -573,9 +571,9 @@ ul {
   margin: 0;
 }
 
-/*_________________________________
+/*__________________________________________
 menu-2-content: Le chic à la française
-_________________________________*/
+___________________________________________*/
 .menu-2-content {
   display: flex;
   flex-direction: column;
@@ -631,9 +629,9 @@ _________________________________*/
     width: 31%;
   }
 }
-/*_________________________________
+/*___________________________________________
 menu-3-content: Le délice des papilles
-_________________________________*/
+___________________________________________*/
 .menu-3-content {
   display: flex;
   flex-direction: column;
@@ -658,9 +656,9 @@ _________________________________*/
   margin-bottom: 80px;
 }
 
-/*_________________________________
+/*___________________________________________
 menu-4-content: La palette du goût
-_________________________________*/
+___________________________________________*/
 .menu-4-content {
   display: flex;
   flex-direction: column;

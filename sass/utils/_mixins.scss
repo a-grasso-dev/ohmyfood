@@ -1,3 +1,4 @@
+// style des "menu" sur la home
 @mixin layout-menu($color) {
   width: 200px;
   height: 282px;
@@ -7,6 +8,8 @@
   background-color: $color;
   @include center-column;
 }
+
+// style des "menu-content"
 @mixin layout-menu-content($color) {
   @include center-column;
   box-shadow: 0 0 7px $color-shadow;
@@ -18,13 +21,16 @@
   padding-right: 10%;
 }
 
+// typohraphie generale pour les texts (hors "menu"), qui reprends le style du logo
 @mixin typography-body($color: $color-secondary, $size: $font-size) {
   font-size: $size;
-  font-family: sans-serif, Arial, Helvetica;
+  @include font-family(sans-serif);
   color: $color;
   margin-left: 5%;
   margin-right: 5%;
 }
+
+// pour centrer les contenue
 @mixin center-column {
   display: flex;
   flex-direction: column;
@@ -32,6 +38,14 @@
   align-items: center;
 }
 
+// pour centrer les pages
+@mixin center-pages {
+  @include center-column;
+  padding: 20px;
+  padding-bottom: 85px;
+}
+
+// degrade pour les titre "h2"
 @mixin color-text-gradient(
   $color-menu__text-primary,
   $color-menu__text-secondary
@@ -46,11 +60,14 @@
   color: transparent;
   text-align: center;
 }
+
+// groupe de "font-family" pour tout les texts
 @mixin font-family($font-family) {
   font-family: $font-family, "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+// typographie pour les "h1" des "menu"
 @mixin typography-h1_primary($font-family, $color, $size: 1.7rem) {
   @include font-family($font-family);
   color: $color;
@@ -58,6 +75,7 @@
   margin: 0;
 }
 
+// typographie pour les "h2" des "menu" et "menu-content"
 @mixin typography-h2_primary(
   $font-family,
   $color-text-gradient_1,
