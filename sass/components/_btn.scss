@@ -1,11 +1,11 @@
-.btn-soon__container {
+.btn-soon-container {
   width: 100%;
   height: 157px;
+  margin-bottom: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 54px;
-  .btn-soon {
+  .btn-soon-container__button {
     width: 258px;
     height: 46px;
     background-color: $color-primary;

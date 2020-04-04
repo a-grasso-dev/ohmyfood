@@ -1,235 +1,132 @@
-/*___________________________________________
-"home-page"
-___________________________________________*/
-
-//menu-1
-.menu-1 {
-  h1 {
-    @include typography-h1_primary(
-      $font-family_menu_primary,
-      $color-menu1__text-primary
-    );
-  }
-  h2 {
-    @include typography-h2_primary(
-      $font-family_menu-1_secondary,
-      $color-menu1__text-primary,
-      $color-menu1__text-primary
-    );
+h1 {
+  @include font-family($font-family_menu_primary);
+  color: $color-menu1__text-primary;
+  font-size: 1.7rem;
+  margin: 0;
+}
+.h1--menu2 {
+  font-family: $font-family_menu_secondary;
+  color: $color-menu2__text-primary;
+}
+.h1--menu3 {
+  color: $color-menu3__text-primary;
+}
+.h1--menu4 {
+  color: $color-menu4__text-primary;
+}
+// titre externe "h1" pour tous les "menu-content" + "mentions-legales"
+.h1--content {
+  font-family: $font-family_menu-content_h1;
+  color: $black;
+  font-size: 1.25em;
+  margin: 60px 0 30px 0;
+}
+@media all and (min-width: 540px) {
+  .h1--content {
+    font-size: 2em;
   }
 }
 
-//menu-2
-.menu-2 {
-  h1 {
-    @include typography-h1_primary(
-      $font-family_menu_secondary,
-      $color-menu2__text-primary
-    );
-  }
-  h2 {
-    @include typography-h2_primary(
-      $font-family_menu-2_secondary,
-      $color-menu2__text-primary,
-      $color-menu2__text-secondary
-    );
-    height: 21px;
+h2 {
+  @include font-family($font-family_menu-1_secondary);
+  color: #3c1218;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+  height: 29px;
+}
+.h2--menu1 {
+  margin: 3px 0 15px 0;
+}
+
+.h2--menu2 {
+  font-family: $font-family_menu-2_secondary;
+  @include color-text-gradient(
+    $color-menu2__text-primary,
+    $color-menu2__text-secondary
+  );
+}
+.h2--menu3 {
+  font-family: $font-family_menu-3_secondary;
+  @include color-text-gradient(
+    $color-menu3__text-secondary,
+    $color-menu3__text-primary
+  );
+}
+.h2--menu4 {
+  font-family: $font-family_menu-4_secondary;
+  @include color-text-gradient(
+    $color-menu4__text-primary,
+    $color-menu4__text-secondary
+  );
+}
+.h2--menu-content {
+  font-size: 1.4rem;
+  margin: 75px 0 15px 0;
+}
+@media all and (min-width: 540px) {
+  .h2--menu-content {
+    font-size: 2.5rem;
+    height: 65px;
   }
 }
 
-//menu-3
-.menu-3 {
-  h1 {
-    @include typography-h1_primary(
-      $font-family_menu_primary,
-      $color-menu3__text-primary
-    );
-  }
-  h2 {
-    @include typography-h2_primary(
-      $font-family_menu-3_secondary,
-      $color-menu3__text-secondary,
-      $color-menu3__text-primary
-    );
-  }
-}
-
-//menu-4
-.menu-4 {
-  h1 {
-    @include typography-h1_primary(
-      $font-family_menu_primary,
-      $color-menu4__text-primary
-    );
-  }
-  h2 {
-    @include typography-h2_primary(
-      $font-family_menu-4_secondary,
-      $color-menu4__text-primary,
-      $color-menu4__text-secondary
-    );
-  }
-}
-
-/* mediaquerises a partir de 720px
-pour les "h1" et "h2" de tous les "menu" */
+// mediaquerises a partir de 720px pour les "h1" et "h2" de tous les "menu"
 @media all and (min-width: 720px) {
-  .menu__central-block h1 {
+  .menu-central-block h1 {
     font-size: 2rem;
   }
-  .menu__central-block h2 {
+  .menu-central-block h2 {
     font-size: 1.4rem;
-    height: 29px;
   }
+}
+
+// typhographie generale pour les texts (hors "menu"), qui reprends le style du logo ( btn + footer )
+.typography {
+  @include font-family;
+  color: $color-secondary;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: $font-size-primary;
 }
 
 //bouton prochainement...
-.btn-soon {
-  @include typography-body($size: 1.5em);
+.typography--btn {
+  font-size: 1.5em;
 }
 
-//footer
-.footer__link {
-  @include typography-body;
-}
-
-/*___________________________________________
-menu-1-content: La note enchantée
-___________________________________________*/
-
-// titre externe "h1" pour tous les "menu-content" + "mentions-legales"
-.main__menu-content,
-.main__mentions-legales {
-  h1 {
-    @include font-family($font-family_menu-content_h1);
-    font-size: 1.25em;
+//les articles des "menu"
+article {
+  @include font-family($font-family_menu_primary);
+  h3,
+  .price {
+    font-weight: bold;
+  }
+  .item {
+    font-weight: lighter;
   }
 }
-
-.menu-1-content {
-  h2 {
-    @include font-family($font-family_menu-1_secondary);
-    color: $color-menu1__text-primary;
-    font-size: 2.5em;
-    margin: 3px 0;
-    height: 50px;
+.article--menu2 {
+  font-family: $font-family_menu-content_menu-2_primary;
+  ul {
+    font-weight: normal;
   }
 }
-.menu-1-content {
-  article {
-    @include font-family($font-family_menu_primary);
-    h3,
+.article--menu3-4 {
+  h3 {
+    font-weight: lighter;
+  }
+  li {
     .price {
-      font-weight: bold;
-    }
-    li {
-      .item {
-        font-weight: lighter;
-      }
-    }
-  }
-}
-
-/*___________________________________________
-menu-2-content: Le chic à la française
-___________________________________________*/
-.menu-2-content {
-  h2 {
-    @include typography-h2_primary(
-      $font-family_menu-2_secondary,
-      $color-menu2__text-primary,
-      $color-menu2__text-secondary,
-      2.3rem
-    );
-    height: 50px;
-    margin: 75px 0 15px 0;
-  }
-}
-.menu-2-content {
-  article {
-    @include font-family($font-family_menu-content_menu-2_primary);
-    h3 {
-      font-weight: bold;
-    }
-    li {
       font-weight: normal;
     }
   }
 }
 
-/*___________________________________________
-menu-3-content: Le délice des papilles
-___________________________________________*/
-
-.menu-3-content {
-  h2 {
-    @include typography-h2_primary(
-      $font-family_menu-3_secondary,
-      $color-menu3__text-secondary,
-      $color-menu3__text-primary,
-      2.3rem
-    );
-    height: 50px;
-    margin: 75px 0 15px 0;
-  }
-}
-
-.menu-3-content,
-.menu-4-content {
-  article {
-    @include font-family($font-family_menu_primary);
-    h3,
-    .item {
-      font-weight: lighter;
-    }
-    li {
-      .price {
-        font-weight: normal;
-      }
-    }
-  }
-}
-
-/*___________________________________________
-menu-4-content: La palette du goût
-___________________________________________*/
-
-.menu-4-content {
-  h2 {
-    @include typography-h2_primary(
-      $font-family_menu-4_secondary,
-      $color-menu4__text-primary,
-      $color-menu4__text-secondary,
-      2.3rem
-    );
-    height: 50px;
-    margin: 75px 0 15px 0;
-  }
-}
-
-//mediaquerises a partir de 540px
-@media all and (min-width: 540px) {
-  .menu-3-content,
-  .menu-4-content {
-    h2 {
-      font-size: 3rem;
-      height: 65px;
-      margin: 75px 0 7px 0;
-    }
-  }
-}
-
-/*___________________________________________
-mentions legales
-___________________________________________*/
-
-.main__mentions-legales {
-  h2,
+// mentions legales
+.main--mentions-legales {
   p {
-    @include font-family(Verdana);
-    font-size: 0.7em;
-  }
-  p {
+    @include font-family;
     font-size: 1em;
   }
 }

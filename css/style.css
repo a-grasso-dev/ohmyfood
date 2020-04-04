@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html,
 body {
   height: 100%;
@@ -18,12 +17,20 @@ body {
   align-items: center;
   flex-grow: 1;
 }
-.main .main__grid-menu {
-  width: 100%;
+
+.main--menu-content {
+  padding: 20px;
+  padding-bottom: 85px;
 }
 
-/* mediaquerises a partir de 540px
-pour positionner les "menu" sur 2 colonne*/
+.main--mentions-legales {
+  max-width: 518px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 0;
+}
+
+/* mediaquerises a partir de 540px pour positionner les "menu" sur 2 colonne*/
 @media all and (min-width: 540px) {
   .main__grid-menu {
     max-width: 480px;
@@ -31,272 +38,152 @@ pour positionner les "menu" sur 2 colonne*/
     flex-flow: row wrap;
   }
 }
-/* mediaquerises a partir de 720px
-pour positionner les "menu" sur 2 colonne*/
+/* mediaquerises a partir de 720px pour positionner les "menu" sur 2 colonne*/
 @media all and (min-width: 720px) {
   .main__grid-menu {
     max-width: 607px;
   }
 }
-.main__menu-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  padding-bottom: 85px;
-  flex-grow: 1;
-}
-
-.main__mentions-legales {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  padding-bottom: 85px;
-  max-width: 518px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*___________________________________________
-"home-page"
-___________________________________________*/
-.menu-1 h1 {
-  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+h1 {
+  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
   color: #3c1218;
   font-size: 1.7rem;
   margin: 0;
 }
-.menu-1 h2 {
-  font-family: "Devonshire", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: linear-gradient(to bottom right, #3c1218, #3c1218);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-align: center;
-  font-size: 1rem;
-  margin: 3px 0 15px 0;
-  width: 100%;
-}
 
-.menu-2 h1 {
-  font-family: "Vidaloka", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+.h1--menu2 {
+  font-family: "Vidaloka";
   color: #c67412;
-  font-size: 1.7rem;
-  margin: 0;
-}
-.menu-2 h2 {
-  font-family: "Kurale", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: linear-gradient(to bottom right, #c67412, #6e4ccc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-align: center;
-  font-size: 1rem;
-  margin: 3px 0 15px 0;
-  width: 100%;
-  height: 21px;
 }
 
-.menu-3 h1 {
-  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+.h1--menu3 {
   color: #0887fb;
-  font-size: 1.7rem;
-  margin: 0;
-}
-.menu-3 h2 {
-  font-family: "Dancing Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: linear-gradient(to bottom right, #0431df, #0887fb);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-align: center;
-  font-size: 1rem;
-  margin: 3px 0 15px 0;
-  width: 100%;
 }
 
-.menu-4 h1 {
-  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+.h1--menu4 {
   color: #42973c;
-  font-size: 1.7rem;
-  margin: 0;
 }
-.menu-4 h2 {
-  font-family: "Kaushan Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: linear-gradient(to bottom right, #42973c, #bfff7e);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+
+.h1--content {
+  font-family: "Montserrat";
+  color: #000000;
+  font-size: 1.25em;
+  margin: 60px 0 30px 0;
+}
+
+@media all and (min-width: 540px) {
+  .h1--content {
+    font-size: 2em;
+  }
+}
+h2 {
+  font-family: "Devonshire", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
+  color: #3c1218;
   text-align: center;
   font-size: 1rem;
-  margin: 3px 0 15px 0;
   width: 100%;
+  height: 29px;
 }
 
-/* mediaquerises a partir de 720px
-pour les "h1" et "h2" de tous les "menu" */
-@media all and (min-width: 720px) {
-  .menu__central-block h1 {
-    font-size: 2rem;
-  }
-
-  .menu__central-block h2 {
-    font-size: 1.4rem;
-    height: 29px;
-  }
-}
-.btn-soon {
-  font-size: 1.5em;
-  font-family: sans-serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #fdcb46;
-  margin-left: 5%;
-  margin-right: 5%;
+.h2--menu1 {
+  margin: 3px 0 15px 0;
 }
 
-.footer__link {
-  font-size: 1em;
-  font-family: sans-serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #fdcb46;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-/*___________________________________________
-menu-1-content: La note enchantée
-___________________________________________*/
-.main__menu-content h1,
-.main__mentions-legales h1 {
-  font-family: "Montserrat", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: 1.25em;
-}
-
-.menu-1-content h2 {
-  font-family: "Devonshire", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #3c1218;
-  font-size: 2.5em;
-  margin: 3px 0;
-  height: 50px;
-}
-
-.menu-1-content article {
-  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-.menu-1-content article h3,
-.menu-1-content article .price {
-  font-weight: bold;
-}
-.menu-1-content article li .item {
-  font-weight: lighter;
-}
-
-/*___________________________________________
-menu-2-content: Le chic à la française
-___________________________________________*/
-.menu-2-content h2 {
-  font-family: "Kurale", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+.h2--menu2 {
+  font-family: "Kurale";
   background: linear-gradient(to bottom right, #c67412, #6e4ccc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  text-align: center;
-  font-size: 2.3rem;
-  margin: 3px 0 15px 0;
-  width: 100%;
-  height: 50px;
-  margin: 75px 0 15px 0;
 }
 
-.menu-2-content article {
-  font-family: "Crimson Text", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-.menu-2-content article h3 {
-  font-weight: bold;
-}
-.menu-2-content article li {
-  font-weight: normal;
-}
-
-/*___________________________________________
-menu-3-content: Le délice des papilles
-___________________________________________*/
-.menu-3-content h2 {
-  font-family: "Dancing Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+.h2--menu3 {
+  font-family: "Dancing Script";
   background: linear-gradient(to bottom right, #0431df, #0887fb);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  text-align: center;
-  font-size: 2.3rem;
-  margin: 3px 0 15px 0;
-  width: 100%;
-  height: 50px;
-  margin: 75px 0 15px 0;
 }
 
-.menu-3-content article,
-.menu-4-content article {
-  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-.menu-3-content article h3,
-.menu-3-content article .item,
-.menu-4-content article h3,
-.menu-4-content article .item {
-  font-weight: lighter;
-}
-.menu-3-content article li .price,
-.menu-4-content article li .price {
-  font-weight: normal;
-}
-
-/*___________________________________________
-menu-4-content: La palette du goût
-___________________________________________*/
-.menu-4-content h2 {
-  font-family: "Kaushan Script", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+.h2--menu4 {
+  font-family: "Kaushan Script";
   background: linear-gradient(to bottom right, #42973c, #bfff7e);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  text-align: center;
-  font-size: 2.3rem;
-  margin: 3px 0 15px 0;
-  width: 100%;
-  height: 50px;
+}
+
+.h2--menu-content {
+  font-size: 1.4rem;
   margin: 75px 0 15px 0;
 }
 
 @media all and (min-width: 540px) {
-  .menu-3-content h2,
-.menu-4-content h2 {
-    font-size: 3rem;
+  .h2--menu-content {
+    font-size: 2.5rem;
     height: 65px;
-    margin: 75px 0 7px 0;
   }
 }
-/*___________________________________________
-mentions legales
-___________________________________________*/
-.main__mentions-legales h2,
-.main__mentions-legales p {
-  font-family: Verdana, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: 0.7em;
+@media all and (min-width: 720px) {
+  .menu-central-block h1 {
+    font-size: 2rem;
+  }
+
+  .menu-central-block h2 {
+    font-size: 1.4rem;
+  }
 }
-.main__mentions-legales p {
+.typography {
+  font-family: sans-serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
+  color: #fdcb46;
+  margin-left: 5%;
+  margin-right: 5%;
   font-size: 1em;
 }
 
-.btn-soon__container {
+.typography--btn {
+  font-size: 1.5em;
+}
+
+article {
+  font-family: "Kalam", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
+}
+article h3,
+article .price {
+  font-weight: bold;
+}
+article .item {
+  font-weight: lighter;
+}
+
+.article--menu2 {
+  font-family: "Crimson Text";
+}
+.article--menu2 ul {
+  font-weight: normal;
+}
+
+.article--menu3-4 h3 {
+  font-weight: lighter;
+}
+.article--menu3-4 li .price {
+  font-weight: normal;
+}
+
+.main--mentions-legales p {
+  font-family: sans-serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
+  font-size: 1em;
+}
+
+.btn-soon-container {
   width: 100%;
   height: 157px;
+  margin-bottom: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 54px;
 }
-.btn-soon__container .btn-soon {
+.btn-soon-container .btn-soon-container__button {
   width: 258px;
   height: 46px;
   background-color: #579c87;
@@ -306,12 +193,12 @@ ___________________________________________*/
   align-items: center;
 }
 
-.menu__central-block {
+.menu-central-block {
   height: 100%;
   width: 100%;
   transition: transform 300ms, opacity 250ms 50ms;
 }
-.menu__central-block:hover {
+.menu-central-block:hover {
   transform: scale(1.1);
   opacity: 0.5;
 }
@@ -356,6 +243,19 @@ ___________________________________________*/
     transform: translate(4px, 0);
   }
 }
+h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+h3:hover::after {
+  width: 100%;
+  background: #000000;
+}
+
 header {
   background-color: #579c87;
   width: 100%;
@@ -379,7 +279,7 @@ header {
     height: 50px;
   }
 }
-.footer__container {
+.footer-container {
   background-color: #579c87;
   width: 100%;
   height: 54px;
@@ -389,7 +289,7 @@ header {
   left: 0;
   right: 0;
 }
-.footer__container footer {
+.footer-container footer {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -397,7 +297,7 @@ header {
   max-width: 720px;
 }
 
-.menu-1 {
+.layout-menu {
   width: 200px;
   height: 282px;
   box-shadow: 0 0 7px #dddddd;
@@ -409,59 +309,29 @@ header {
   justify-content: center;
   align-items: center;
 }
-.menu-1 img {
+.layout-menu img {
   width: 32px;
 }
 
-.menu-2 {
-  width: 200px;
-  height: 282px;
-  box-shadow: 0 0 7px #dddddd;
-  margin: auto;
-  margin-top: 32px;
-  background-color: #fff5fe;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-3 {
-  width: 200px;
-  height: 282px;
-  box-shadow: 0 0 7px #dddddd;
-  margin: auto;
-  margin-top: 32px;
-  background-color: #eef0f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-4 {
-  width: 200px;
-  height: 282px;
-  box-shadow: 0 0 7px #dddddd;
-  margin: auto;
-  margin-top: 32px;
-  background-color: #fdfffd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 @media all and (min-width: 720px) {
-  .menu-1,
-.menu-2,
-.menu-3,
-.menu-4 {
+  .layout-menu {
     width: 270px;
     height: 381px;
   }
 }
-.menu__central-block {
+.layout-menu--menu-2 {
+  background-color: #fff5fe;
+}
+
+.layout-menu--menu-3 {
+  background-color: #eef0f0;
+}
+
+.layout-menu--menu-4 {
+  background-color: #fdfffd;
+}
+
+.menu-central-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -472,64 +342,83 @@ a {
   text-decoration: none;
 }
 
-.main_menu-1 h1 {
-  margin: 20px;
-}
-
-.menu-1-content {
+.menu-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fcdfdb;
   box-shadow: 0 0 7px #dddddd;
   margin-bottom: 80px;
-  background-color: #fcdfdb;
-  padding-bottom: 39px;
+  padding-bottom: 65px;
   max-width: 518px;
   padding-left: 10%;
   padding-right: 10%;
+  min-height: 890px;
 }
-.menu-1-content > img {
+.menu-content > img {
   width: 64px;
   margin-top: 47px;
+  margin-bottom: -67px;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
+@media all and (min-width: 720px) {
+  .menu-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.menu-content--menu2 {
+  background-color: #fff5fe;
 }
 
-.menu-1-content__title,
-.menu-2-content__title,
-.menu-3-content__title,
-.menu-4-content__title {
+.menu-content--menu3 {
+  background-color: #eef0f0;
+}
+
+.menu-content--menu4 {
+  background-color: #fdfffd;
+}
+
+.menu-content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu-1-content__title img,
-.menu-2-content__title img,
-.menu-3-content__title img,
-.menu-4-content__title img {
+.menu-content__title img {
   width: 24%;
   margin: 40px 0 10px 0;
 }
-.menu-1-content__title h3,
-.menu-2-content__title h3,
-.menu-3-content__title h3,
-.menu-4-content__title h3 {
+.menu-content__title h3 {
   text-align: center;
   margin: 40px 0 10px 0;
 }
 
 @media all and (min-width: 540px) {
-  .menu-1-content__title img {
+  .menu-content__title img {
     width: 30%;
   }
 }
 @media all and (min-width: 720px) {
-  .menu-1-content__title img {
+  .menu-content__title img {
     width: 34%;
+  }
+}
+.menu-content__title--out .dec-left {
+  position: relative;
+  left: -8px;
+}
+.menu-content__title--out .dec-right {
+  position: relative;
+  right: -8px;
+}
+
+@media all and (min-width: 540px) {
+  .menu-content__title--out .dec-left {
+    left: -31px;
+  }
+  .menu-content__title--out .dec-right {
+    right: -31px;
   }
 }
 li {
@@ -537,7 +426,7 @@ li {
 }
 
 ul {
-  padding-inline-start: 0;
+  padding: 0;
   margin: 0;
   text-align: center;
 }
@@ -553,134 +442,32 @@ ul {
 
   ul {
     text-align: left;
-    margin: 0;
   }
 }
-.menu-1-content__logo-bottom {
+.menu-content__logo-bottom {
   display: flex;
   align-items: center;
   margin-top: 36px;
 }
-.menu-1-content__logo-bottom img {
+.menu-content__logo-bottom img {
   width: 36px;
   margin-right: 5px;
-  margin-bottom: 18px;
 }
-.menu-1-content__logo-bottom h2 {
+.menu-content__logo-bottom h2 {
   font-size: 1.6em;
   margin: 0;
 }
 
-/*__________________________________________
-menu-2-content: Le chic à la française
-___________________________________________*/
-.menu-2-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 7px #dddddd;
-  margin-bottom: 80px;
-  background-color: #fff5fe;
-  padding-bottom: 39px;
-  max-width: 518px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.Pour-se-mettre-en-appetit {
+.article--color-up {
   color: #c67412;
-  margin-top: 20px;
 }
 
-.Plaisir-des-papilles {
+.article--color-middle {
   color: #a56799;
 }
 
-.Gourmandises-sucrees {
+.article--color-down {
   color: #6e4ccc;
-  margin-bottom: 80px;
-}
-
-.menu-2-content__title .dec-left,
-.menu-3-content__title .dec-left,
-.menu-4-content__title .dec-left {
-  position: relative;
-  left: -8px;
-}
-.menu-2-content__title .dec-right,
-.menu-3-content__title .dec-right,
-.menu-4-content__title .dec-right {
-  position: relative;
-  right: -8px;
-}
-
-@media all and (min-width: 540px) {
-  .menu-2-content__title .dec-left,
-.menu-3-content__title .dec-left,
-.menu-4-content__title .dec-left {
-    left: -31px;
-    width: 31%;
-  }
-  .menu-2-content__title .dec-right,
-.menu-3-content__title .dec-right,
-.menu-4-content__title .dec-right {
-    right: -31px;
-    width: 31%;
-  }
-}
-/*___________________________________________
-menu-3-content: Le délice des papilles
-___________________________________________*/
-.menu-3-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 7px #dddddd;
-  margin-bottom: 80px;
-  background-color: #eef0f0;
-  padding-bottom: 39px;
-  max-width: 518px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.pour-bien-commencer,
-.main__menu-4-content {
-  margin-top: 20px;
-}
-
-.gourmandises-sucrees,
-.au-sommet-de-l-art {
-  margin-bottom: 80px;
-}
-
-/*___________________________________________
-menu-4-content: La palette du goût
-___________________________________________*/
-.menu-4-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 7px #dddddd;
-  margin-bottom: 80px;
-  background-color: #fdfffd;
-  padding-bottom: 39px;
-  max-width: 518px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-@media all and (min-width: 720px) {
-  .menu-1-content,
-.menu-2-content,
-.menu-3-content,
-.menu-4-content {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 //zoom pour les menus quand on pointe avec la souri
-.menu__central-block {
+.menu-central-block {
   height: 100%;
   width: 100%;
   transition: transform 300ms, opacity 250ms 50ms;
@@ -62,4 +62,17 @@
   60% {
     transform: translate(4px, 0);
   }
+}
+
+// h3 souligné au passage de la souri
+h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  transition: width 0.5s ease;
+}
+h3:hover::after {
+  width: 100%;
+  background: $black;
 }

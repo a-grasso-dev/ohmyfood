@@ -1,6 +1,10 @@
 $color-primary: #579c87;
 $color-secondary: #fdcb46;
 
+$font-primary: sans-serif;
+$font-size-primary: 1em;
+$color-shadow: #dddddd;
+
 $font-family_menu_primary: "Kalam";
 $font-family_menu_secondary: "Vidaloka";
 
@@ -28,14 +32,9 @@ $color-menu4__text-primary: #42973c;
 $color-menu4__text-secondary: #bfff7e;
 $font-family_menu-4_secondary: "Kaushan Script";
 
-$color-shadow: #dddddd;
-$font-size: 1em;
-
-//h1 des menu-contents
+//h1 des "content"
 $font-family_menu-content_h1: "Montserrat";
-
+// textes du "menu2-content"
 $font-family_menu-content_menu-2_primary: "Crimson Text";
 
-$white: #ffffff;
-$color-test: red;
-$color-test2: blue;
+$black: #000000;

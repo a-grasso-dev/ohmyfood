@@ -1,0 +1,130 @@
+.menu-content {
+  @include center-column;
+  background-color: $color-menu1;
+  box-shadow: 0 0 7px $color-shadow;
+  margin-bottom: 80px;
+  padding-bottom: 65px;
+  max-width: 518px;
+  padding-left: 10%;
+  padding-right: 10%;
+  min-height: 890px;
+  > img {
+    width: 64px;
+    margin-top: 47px;
+    margin-bottom: -67px;
+  }
+}
+@media all and (min-width: 720px) {
+  .menu-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+.menu-content--menu2 {
+  background-color: $color-menu2;
+}
+.menu-content--menu3 {
+  background-color: $color-menu3;
+}
+.menu-content--menu4 {
+  background-color: $color-menu4;
+}
+
+//conteniteur des h3 des "menu-content"
+.menu-content__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 24%;
+    margin: 40px 0 10px 0;
+  }
+  h3 {
+    text-align: center;
+    margin: 40px 0 10px 0;
+  }
+}
+@media all and (min-width: 540px) {
+  .menu-content__title {
+    & img {
+      width: 30%;
+    }
+  }
+}
+@media all and (min-width: 720px) {
+  .menu-content__title {
+    & img {
+      width: 34%;
+    }
+  }
+}
+
+//les elements decoratifs qui depasse les listes a puces (menu-2, 3 et 4)
+.menu-content__title--out {
+  .dec-left {
+    position: relative;
+    left: -8px;
+  }
+  .dec-right {
+    position: relative;
+    right: -8px;
+  }
+}
+@media all and (min-width: 540px) {
+  .menu-content__title--out {
+    .dec-left {
+      left: -31px;
+    }
+    .dec-right {
+      right: -31px;
+    }
+  }
+}
+
+li {
+  list-style-type: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+//mediaquerises a partir de 540px pour toute les listes a puces
+@media all and (min-width: 540px) {
+  li {
+    display: flex;
+    justify-content: space-between;
+    .price {
+      margin-left: 25px;
+    }
+  }
+  ul {
+    text-align: left;
+  }
+}
+
+.menu-content__logo-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 36px;
+  img {
+    width: 36px;
+    margin-right: 5px;
+  }
+  h2 {
+    font-size: 1.6em;
+    margin: 0;
+  }
+}
+
+// Les articles coloré du menu-2
+.article--color-up {
+  color: $color-menu2__text-primary;
+}
+.article--color-middle {
+  color: $color-menu2__text-tertiary;
+}
+.article--color-down {
+  color: $color-menu2__text-secondary;
+}
