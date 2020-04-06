@@ -11,7 +11,7 @@
 }
 
 //trois points de suspension pour le bouton prochainement
-.btn-soon::after {
+.btn-soon-container__button::after {
   // pseudo-element "::after" pour creer le point avec "content: ."
   content: " .";
   animation: dots 2s infinite;

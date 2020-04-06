@@ -203,7 +203,7 @@ article .item {
   opacity: 0.5;
 }
 
-.btn-soon::after {
+.btn-soon-container__button::after {
   content: " .";
   animation: dots 2s infinite;
 }
