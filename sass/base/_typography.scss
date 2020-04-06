@@ -73,10 +73,10 @@ h2 {
 
 // mediaquerises a partir de 720px pour les "h1" et "h2" de tous les "menu"
 @media all and (min-width: 720px) {
-  .menu-central-block h1 {
+  .layout-menu__inside h1 {
     font-size: 2rem;
   }
-  .menu-central-block h2 {
+  .layout-menu__inside h2 {
     font-size: 1.4rem;
   }
 }

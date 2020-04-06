@@ -125,11 +125,11 @@ h2 {
   }
 }
 @media all and (min-width: 720px) {
-  .menu-central-block h1 {
+  .layout-menu__inside h1 {
     font-size: 2rem;
   }
 
-  .menu-central-block h2 {
+  .layout-menu__inside h2 {
     font-size: 1.4rem;
   }
 }
@@ -193,12 +193,12 @@ article .item {
   align-items: center;
 }
 
-.menu-central-block {
+.layout-menu__inside {
   height: 100%;
   width: 100%;
   transition: transform 300ms, opacity 250ms 50ms;
 }
-.menu-central-block:hover {
+.layout-menu__inside:hover {
   transform: scale(1.1);
   opacity: 0.5;
 }
@@ -331,7 +331,7 @@ header {
   background-color: #fdfffd;
 }
 
-.menu-central-block {
+.layout-menu__inside {
   display: flex;
   flex-direction: column;
   justify-content: center;
